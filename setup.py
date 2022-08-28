@@ -1,13 +1,13 @@
 from setuptools import setup, find_packages
 
 setup(
-    name = 'ACE',
+    name = 'ACETH',
     version = '0.0.1',
     author = 'Karim Galal, Walid Chatt',
     author_email = 'karim.galal@analytics-club.org, walid.chatt@analytics-club.org',
     license = 'MIT',
     description = 'Analytics Club ETHZ helper package',
-    packages = ['ACE'],
+    packages = ['ACETH'],
     url = 'https://github.com/kimo26/ACE',
     keywords = ['ETHZ','ethz','eth','ai','artificial intelligence',
                 'machine learning', 'data processing','chatbot',
