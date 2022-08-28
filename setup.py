@@ -8,7 +8,7 @@ setup(
     license = 'MIT',
     description = 'Analytics Club ETHZ helper package',
     packages = ['ACE'],
-    url = '',
+    url = 'https://github.com/kimo26/ACE',
     keywords = ['ETHZ','ethz','eth','ai','artificial intelligence',
                 'machine learning', 'data processing','chatbot',
                 'education','ml'],
