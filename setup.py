@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name = 'ACETH',
-    version = '0.0.2',
+    version = '0.0.3',
     author = 'Karim Galal, Walid Chatt',
     author_email = 'karim.galal@analytics-club.org, walid.chatt@analytics-club.org',
     license = 'MIT',

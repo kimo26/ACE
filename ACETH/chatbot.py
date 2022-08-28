@@ -14,12 +14,12 @@ logging.disable_progress_bar()
 
 token_chat = AutoTokenizer.from_pretrained("microsoft/DialoGPT-medium")
 model_chat = AutoModelForCausalLM.from_pretrained("microsoft/DialoGPT-medium")
-with open('ACETH/chatbot/data/token_emoji.pkl','rb') as f:
+with open('data/token_emoji.pkl','rb') as f:
     token_em = pickle.load(f)
-with open('ACETH/chatbot/data/encoder_emoji.pkl','rb') as f:
+with open('data/encoder_emoji.pkl','rb') as f:
     encod_em = pickle.load(f)
 
-model_emoji = load_model('ACETH/chatbot/data/emoji_model.h5')
+model_emoji = load_model('data/emoji_model.h5')
 print('Model and tokenizer is loaded')
 
 def addEmoji(text):
