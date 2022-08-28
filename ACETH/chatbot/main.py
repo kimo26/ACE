@@ -8,7 +8,7 @@ import numpy as np
 import emoji
 import warnings
 warnings.filterwarnings("ignore")
-
+print("Loading models...")
 logging.disable_progress_bar()
 
 token_chat = AutoTokenizer.from_pretrained("microsoft/DialoGPT-medium")
