@@ -9,9 +9,9 @@ setup(
     description = 'Analytics Club ETHZ helper package',
     packages = ['ACETH'],
     url = 'https://github.com/kimo26/ACE',
-    keywords = ['ETHZ','ethz','eth','ai','artificial intelligence',
+    keywords = ['ETHZ','ethz','eth','AI','artificial intelligence',
                 'machine learning', 'data processing','chatbot',
-                'education','ml'],
+                'education','ML'],
     install_requires = [
         'numpy','pandas','torch',
         'tensorflow','transformers','sklearn',
