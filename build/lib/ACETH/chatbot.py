@@ -1,3 +1,5 @@
+import emoji,os
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3' 
 from transformers import AutoModelForCausalLM, AutoTokenizer
 import torch
 from transformers import logging
@@ -5,21 +7,21 @@ import pickle
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 import numpy as np
-import emoji,os
+
 import warnings
-os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3' 
+
 warnings.filterwarnings("ignore")
 print("Loading models...")
 logging.disable_progress_bar()
-
+loc = os.path.dirname(__file__)
 token_chat = AutoTokenizer.from_pretrained("microsoft/DialoGPT-medium")
 model_chat = AutoModelForCausalLM.from_pretrained("microsoft/DialoGPT-medium")
-with open('data/token_emoji.pkl','rb') as f:
+with open(loc+'/data/token_emoji.pkl','rb') as f:
     token_em = pickle.load(f)
-with open('data/encoder_emoji.pkl','rb') as f:
+with open(loc+'/data/encoder_emoji.pkl','rb') as f:
     encod_em = pickle.load(f)
 
-model_emoji = load_model('data/emoji_model.h5')
+model_emoji = load_model(loc+'/data/emoji_model.h5')
 print('Model and tokenizer is loaded')
 
 def addEmoji(text):
@@ -40,9 +42,8 @@ def addEmoji(text):
             y = i
             break
     y = encod_em.inverse_transform([y])[0]
-    y= y.replace(':','')
-    if y == 'male_sign':
-        y=''
+
+  
     text = emoji.emojize(f'{text} :{y}:')
     return text
 
